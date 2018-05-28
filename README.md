@@ -1,20 +1,18 @@
 # Install_TF
 
+## 安装NVIDIA显卡驱动
 
-## CuDNNv6安装
-    (1)#
+## 安装CUDA
+
+## 安装CuDNNv6
+    # 复制
       cd cuda/include
       sudo cp cudnn.h /usr/local/cuda/include/
-
-    (2)# 
+    # 复制
       cd ../lib64
       sudo cp lib* /usr/local/cuda/lib64/
       cd /usr/local/cuda/lib64/
-    (3)删除cudnn
-      sudo rm -rf libcudnn.so libcudnn.so.*
-    (4)重新软连接
-      sudo ln -s libcudnn.so.6 libcudnn.so
-    (5)更改权限
+    # 更改权限
       sudo chmod a+x /usr/local/cuda/include/cudnn.h  /usr/local/cuda/lib64/libcudnn*
 
 ## 安装Tensorflow（清华镜像）
@@ -40,3 +38,4 @@
 
 
 
+#
