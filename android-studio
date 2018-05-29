@@ -31,7 +31,6 @@
 	export PATH=$PATH:${ANDROID_NDK_HOME}
 
 
-
 注解：中间过程会提示升级cmake，点击升级即可
 
 
