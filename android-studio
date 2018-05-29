@@ -1,0 +1,70 @@
+
+
+第一步、安装JDK
+命令如下：
+	sudo add-apt-repository ppa:webupd8team/java
+	sudo apt-get update
+	sudo apt-get install oracle-java8-installer
+	执行完上面三条命令以后，再执行下面三条命令，测试一下，安装是否成功
+	java -version
+	java
+	javac
+至此，JDK安装完毕
+
+第二步、安装SDK
+（1）安装依赖包
+	sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6 
+（2）配置环境变量
+	# Android SDK
+	export ANDROID_SDK_HOME=/home/gjw/Android/android-sdk-linux
+	export PATH=$PATH:${ANDROID_SDK_HOME}/tools
+	export PATH=$PATH:${ANDROID_SDK_HOME}/platform-tools
+（3）【非常重要的一步】解压，进入/home/gjw/Android/android-sdk-linux/tools，执行./android
+	安装相关工具
+		[1]默认已经选择：Android SDK Tools,AndroidSDK Platform-tools
+		[2]其它选项暂时不安装，后面用到再安装也不迟
+（4）检查是否成功安装，执行adb,若打印相关信息并且不报错，说明安装成功。
+
+第三步、安装NDK,配置环境变量
+	# Android NDK
+	export ANDROID_NDK_HOME=/home/gjw/Android/android-ndk-r13b
+	export PATH=$PATH:${ANDROID_NDK_HOME}
+
+
+
+注解：中间过程会提示升级cmake，点击升级即可
+
+
+第四步、Android Studio
+（1）首先自己去Android Studio中文网站（http://www.android-studio.org/），下载 linux版本
+（2）
+cd /home/gjw/android-studio/bin
+执行./studio.sh，新建工程，一路next，即可：
+【非常重要的一步】File--->Project Structure
+1.配置SDK
+	--->SDK Location(/home/gjw/Android/android-sdk-linux)
+2.配置NDK
+	--->Project Structure--->NDK(/home/gjw/Android/android-ndk-r13b)
+3.中间遇到什么红色的错误，解决方案：
+	点击红色错误，安装相关选项
+4.直到没有错误，点击Run 'app'按钮，生成工程：
+	如果生成工程成功，则弹出Select Deployment Target对话框
+
+第五步、发布APK到手机端
+(1)Build--->Generate Signed APK
+Generate Signed APK的必填选项
+[1]Key store path
+	Key store path--->Create new ... 
+	Key store path: 秘钥保存地址
+	Password:最短6位   Confirm
+	First and Last Name
+[2]点击Naxt
+
+
+
+
+
+
+
+
+
