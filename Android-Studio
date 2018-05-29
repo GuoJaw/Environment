@@ -1,0 +1,43 @@
+
+
+第一步、安装JDK
+命令如下：
+	sudo add-apt-repository ppa:webupd8team/java
+	sudo apt-get update
+	sudo apt-get install oracle-java8-installer
+	执行完上面三条命令以后，再执行下面三条命令，测试一下，安装是否成功
+	java -version
+	java
+	javac
+至此，JDK安装完毕
+
+第二步、安装SDK
+（0）安装依赖包
+	sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6 
+（1）解压，进入/home/gjw/Android/android-sdk-linux/tools，执行./android
+（2）选择SDK版本（此处选择SDK7.1.1），安装
+（3）配置环境变量
+# Android SDK
+export ANDROID_SDK_HOME=/home/gjw/Android/android-sdk-linux
+export PATH=$PATH:${ANDROID_SDK_HOME}/tools
+export PATH=$PATH:${ANDROID_SDK_HOME}/platform-tools
+
+（4）检查是否成功安装，执行adb,若不报错，说明安装成功。
+
+第三步、安装NDK
+# Android NDK
+export ANDROID_NDK_HOME=/home/gjw/Android/android-ndk-r13b
+export PATH=$PATH:${ANDROID_NDK_HOME}
+
+
+第四步、Android Studio
+（1）首先自己去Android Studio中文网站（http://www.android-studio.org/）下载 linux版本
+（2）./studio.sh文件，开始安装
+	参考链接：https://blog.csdn.net/siwuxie095/article/details/53431818
+
+第四步、安装Genymotion
+
+
+
+
+
