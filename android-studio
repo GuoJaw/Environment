@@ -50,14 +50,15 @@ cd /home/gjw/android-studio/bin
 	如果生成工程成功，则弹出Select Deployment Target对话框
 
 第五步、发布APK到手机端
-(1)Build--->Generate Signed APK
-Generate Signed APK的必填选项
-[1]Key store path
-	Key store path--->Create new ... 
-	Key store path: 秘钥保存地址
-	Password:最短6位   Confirm
-	First and Last Name
-[2]点击Next
+Build--->Generate Signed APK
+	Generate Signed APK的必填选项
+		[1]Key store path
+			Key store path--->Create new ... 
+			Key store path: 秘钥保存地址
+			Password:最短6位   Confirm
+			First and Last Name
+		[2]点击Next，等待，会生成APK
+			点击locate就可以找到APK生成的地址
 
 
 
