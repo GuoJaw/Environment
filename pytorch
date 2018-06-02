@@ -1,5 +1,13 @@
 
 安装pytorch
+
+升级pip
+    sudo pip install –upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+安装依赖库：使用清华源镜像加速
+        sudo pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+        some-package: numpy scipy matplotlib ipython==5.1.0 jupyter pandas sympy nose 
+安装pytorch
     （1）进入pytorch 官网：pytorch,下载torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl
     （2）安装
             cd  安装包目录#要进入安装包目录安装
