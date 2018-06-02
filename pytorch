@@ -1,0 +1,13 @@
+
+安装pytorch
+    （1）进入pytorch 官网：pytorch,下载torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl
+    （2）安装
+            cd  安装包目录#要进入安装包目录安装
+            sudo pip install torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl#安装包文件名
+            sudo pip install torchvision
+  
+  
+  
+安装mxnet-gpu
+        sudo pip install mxnet-cu80
+        
