@@ -19,3 +19,6 @@
 安装mxnet-gpu
         sudo pip install mxnet-cu80
         
+如果需要用到mxnet.viz可视化工具（可选），还需安装
+    sudo apt-get install graphviz
+    pip install graphviz
