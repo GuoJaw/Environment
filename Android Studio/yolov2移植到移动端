@@ -1,0 +1,30 @@
+
+
+yolov2移植到移动端
+
+1、先把yolov2的yolov2-tiny-voc.weights利用darkflow转换为pd文件。
+
+     命令是：python3 ./flow --model cfg/tiny-yolo-voc.cfg --load bin/yolov2-tiny-voc.weights --savepb
+注意这里用的tiny-yolo-voc.cfg是darkflow代码中的cfg，不要使用从yolo代码中的yolov2-tiny-voc.cfg。
+
+2、然后把转换后的pb文件，重新命名为graph-tiny-yolo-voc.pb，拷贝到assets目录下。
+
+3、之后修改DetectorActivity.java文件，其目录在src/org/tensorflow/demo下：
+修改内容：
+（1）把MODE改成DetectorMode.YOLO：
+        private static final DetectorMode MODE = DetectorMode.YOLO;
+（2）要把labels修改为自己的类别则做如下2处修改：
+        private static final String[] LABELS = {
+        "xxx"};
+
+        private static final int NUM_CLASSES = 1; //自己的类别的个数
+        
+4、点击build apk，生成apk。
+
+5、调整手机为开发者模式，点击AS下方的 monitor，查看手机是否连接成功。
+
+6、点击AS的run 。
+
+
+
+目标是把yolov3移植到手机上, yolov3移植过程：---> 方法求证中，待验证。
